@@ -1,0 +1,16 @@
+---
+name: "x-job"
+
+on:
+  push:
+    branches:
+      - master
+    
+jobs:
+    
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "x-job first step."
+        run: echo "x-job"
