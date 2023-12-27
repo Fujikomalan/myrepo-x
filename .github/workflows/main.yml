@@ -12,5 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: "x-job first step."
         run: echo "x-job"
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.PAT }}
+          repository: Fujikomalan/myrepo-y
+          event-type: deployment-event
